@@ -1,6 +1,3 @@
-// const inquirer = require('inquirer'); // Requires the use of the inquirer npm
-const fs = require('fs'); // requires the use of the File System
-
 const questions = [ // This is the initial question that will populate 
     {
         type: 'list',
@@ -19,3 +16,19 @@ class Employee { // This is the class for the information from the first questio
 }
 
 module.exports = Employee;
+
+function init() {
+  inquirer.prompt(questions).then(data => {
+    const input = '';
+  })
+
+  fs.writeFile(userInput, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('Success!');
+    }
+  })
+}  
+
+init();
