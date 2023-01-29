@@ -16,18 +16,6 @@ class Employee { // This is the class for the information from the first questio
         this.id = id;
         this.email = email;
     }
-
-    printInfo() {
-      console.log(`This office belongs to ${this.name}.`);
-      console.log(`This person's id number is ${this.id}`);
-      console.log(`The users email is ${this.email}`);
-    }
 }
 
 module.exports = Employee;
-
-
-function generateHTML() { // This *should* create the HTML page for the cards to populate to.
-    let newDiv = document.createElement('div');
-    newDiv.innerHTML = "";
-}
