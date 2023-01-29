@@ -1,4 +1,4 @@
-const inquirer = require('inquirer'); // Requires the use of the inquirer npm
+// const inquirer = require('inquirer'); // Requires the use of the inquirer npm
 const fs = require('fs'); // requires the use of the File System
 
 const questions = [ // This is the initial question that will populate 

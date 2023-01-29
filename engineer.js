@@ -1,4 +1,4 @@
-const index = require('./index');
+const Employee = require('./index');
 
 class Engineer extends Employee {
     constructor(github) {
