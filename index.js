@@ -36,12 +36,12 @@ function generateManager(emp) {
   <div class="container row text-center">
   <div class="col-3 m-4">
     <div class="p-2 card text-bg-primary m-5" style="max-width: 18rem;">
-      <div class="card-header" id="header"><p id="name">${managerName}</p><p id="position">Manager</p></div>
+      <div class="card-header" id="header"><p id="name">${data.managerName}</p><p id="position">Manager</p></div>
       <div class="card-body">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item" id="IDNumber">${id}</li>
-          <li class="list-group-item" id="email">${email}</li>
-          <li class="list-group-item" id="various">${number}</li>
+          <li class="list-group-item" id="IDNumber">${data.id}</li>
+          <li class="list-group-item" id="email">${data.email}</li>
+          <li class="list-group-item" id="various">${data.number}</li>
         </ul>
       </div>
     </div>
@@ -79,18 +79,61 @@ function generateEngineer(emp) {
   <div class="container row text-center">
   <div class="col-3 m-4">
     <div class="p-2 card text-bg-primary m-5" style="max-width: 18rem;">
-      <div class="card-header" id="header"><p id="name">${engineerName}</p><p id="position">Manager</p></div>
+      <div class="card-header" id="header"><p id="name">${data.engineerName}</p><p id="position">Engineer</p></div>
       <div class="card-body">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item" id="IDNumber">${id}</li>
-          <li class="list-group-item" id="email">${email}</li>
-          <li class="list-group-item" id="various">${github}</li>
+          <li class="list-group-item" id="IDNumber">${data.id}</li>
+          <li class="list-group-item" id="email">${data.email}</li>
+          <li class="list-group-item" id="various">www.github.com/${data.github}/</li>
         </ul>
       </div>
     </div>
   </div>
 </main>`
 };
+
+function createIntern() {
+  inquirer.prompt([
+    {
+      type: 'input',
+      message: 'What is the name of the intern?',
+      name: 'engineerName'
+    },
+    {
+      type: 'input',
+      message: 'What is the ID number for the intern?',
+      name: 'id'
+    },
+    {
+      type: 'input',
+      message: 'What is the email address for the intern?',
+      name: 'email'
+    },
+    {
+      type: 'input',
+      message: 'What school does the intern attend?',
+      name: 'school'
+    }
+  ])
+};
+
+function generateIntern(emp) {
+  let HTML = `<main>
+  <div class="container row text-center">
+  <div class="col-3 m-4">
+    <div class="p-2 card text-bg-primary m-5" style="max-width: 18rem;">
+      <div class="card-header" id="header"><p id="name">${data.internName}</p><p id="position">Intern</p></div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" id="IDNumber">${data.id}</li>
+          <li class="list-group-item" id="email">${data.email}</li>
+          <li class="list-group-item" id="various">${data.school}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>`
+}
 
 function generateHTML() {
   let HTML = 
