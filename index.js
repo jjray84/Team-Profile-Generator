@@ -4,7 +4,7 @@ const path = require('path');
 
 const Engineer = require('./lib/engineer');
 const Manager = require('./lib/manager');
-const Intern = require('./lib/intern')
+const Intern = require('./lib/intern');
 
 function createManager() {
   inquirer.prompt([
@@ -145,7 +145,14 @@ function generateHTML() {
       <title>This is for creating the HTML element</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
-    <body>`
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid m-3">
+      <a class="navbar-brand">
+        <p class="text-light fs-1 p-3">My Team</p>
+      </a>
+    </div>
+  </nav>${
     Employees.forEach(emp => {
       switch(emp.getRole()) {
         case 'Manager':
@@ -158,31 +165,31 @@ function generateHTML() {
           html += generateIntern(emp);
           break;    
       }
-      `</body>
+    })
+  }
+      </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>` 
-    })
+   
 };
 
 function end() {
   generateHTML();
 }
 
-module.exports = Employee;
+// function init() {
+//   inquirer.prompt(questions).then(data => {
+//     const input = '';
+//   })
 
-function init() {
-  inquirer.prompt(questions).then(data => {
-    const input = '';
-  })
-
-  fs.writeFile(userInput, (err) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('Success!');
-    }
-  })
-}  
+//   fs.writeFile(userInput, (err) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log('Success!');
+//     }
+//   })
+// }  
 
 init();
