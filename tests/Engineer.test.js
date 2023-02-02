@@ -1,5 +1,5 @@
 const Employee = require('./employee');
-const Engineer = require('./Engineer');
+const Engineer = require('./lib/engineer.js');
 
 describe('Engineer', () => {
   it('creates an instance with the given name, id, email, and github', () => {

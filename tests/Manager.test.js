@@ -1,5 +1,5 @@
 const Employee = require('./employee');
-const Manager = require('./Manager');
+const Manager = require('./lib/manager.js');
 
 describe('Manager', () => {
   it('creates an instance with the given name, id, email, and office number', () => {
@@ -11,7 +11,7 @@ describe('Manager', () => {
   });
 
   it('has the role "Manager"', () => {
-    const manager = new Manager('Dwayne Johnson', 2, 'therock@wwe.com', '001');
+    const manager = new Manager('Dwayne Johnson', 4, 'therock@wwe.com', '001');
     expect(manager.getRole()).toEqual('Manager');
   });
 });
