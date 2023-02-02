@@ -19,3 +19,4 @@ https://drive.google.com/file/d/1UCZK3SR0uOViI1Z94et28eAI2GusJc1M/view
 ## Screen Shot
 ![screenshot](./images/127.0.0.1_5500_dist_index.html.png)
 ## Live Link
+https://jjray84.github.io/Team-Profile-Generator/
